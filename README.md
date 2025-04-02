@@ -1,5 +1,5 @@
 # Equipe: Caetano Padoin
-# Link para repositório GitHub: https://github.com/Caetanogp/JogoP5JS
+
 
 ## Jogo da Fenda
 
