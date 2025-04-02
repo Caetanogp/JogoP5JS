@@ -1,108 +1,44 @@
-# JogoP5JS
- jogop5js
-Jogo da Fenda (Rachadura) - p5.js
+# Equipe: Caetano Padoin
 
-Este é um jogo simples criado com p5.js onde o jogador pode lançar uma bola que, ao atingir uma superfície, gera uma rachadura que se expande por um tempo limitado.
+## Jogo da Fenda
 
-🚀 Como funciona
+Este projeto é um jogo desenvolvido em p5.js onde o jogador pode arremessar uma bola. Ao colidir com a borda da tela ou com uma rachadura existente, uma nova rachadura é gerada.
 
-O jogador clica na tela para lançar uma bola na direção do clique.
+## Como funciona
 
-Quando a bola atinge um ponto na tela, ela gera uma rachadura.
+- O jogador clica em qualquer lugar da tela para lançar a bola na direção do clique.
+- Se a bola atingir a borda da tela ou uma rachadura, ela retorna à posição inicial e uma nova rachadura aparece no ponto de impacto.
+- As rachaduras crescem por um tempo limitado e depois desaparecem.
 
-A rachadura cresce de forma aleatória por um curto período e depois para.
+## Estrutura do código
 
-O jogador pode continuar lançando bolas para criar novas rachaduras.
+### Variáveis principais
+- `cracks`: Armazena todas as rachaduras na tela.
+- `ball`: Objeto da classe `Ball` que representa a bola.
+- `gameOver`: Define se o jogo terminou ou não.
 
-📝 Explicação do Código
+### Funções principais
+- `setup()`: Inicializa o canvas e cria a bola.
+- `draw()`: Atualiza e renderiza os elementos do jogo, verificando colisões e removendo rachaduras antigas.
+- `mousePressed()`: Dispara a bola na direção do clique.
 
-🎮 Estrutura Principal
+### Classe `Ball`
+Representa a bola lançada pelo jogador.
+- `shoot(targetX, targetY)`: Calcula a direção da bola com base no clique do jogador.
+- `update()`: Move a bola e verifica colisões.
+- `reset()`: Retorna a bola à posição inicial e cria uma nova rachadura.
+- `display()`: Desenha a bola na tela.
 
-Variáveis globais:
+### Classe `Crack`
+Representa uma rachadura que cresce ao longo do tempo.
+- `grow()`: Faz a rachadura crescer até um limite de tempo.
+- `display()`: Renderiza a rachadura na tela.
 
-cracks: Armazena todas as rachaduras criadas.
+## Como jogar
+1. Execute o código no p5.js.
+2. Clique em qualquer ponto da tela para lançar a bola.
+3. Observe a rachadura aparecer no ponto de impacto.
+4. Continue jogando e criando rachaduras!
 
-ball: Representa a bola lançada pelo jogador.
-
-gameOver: Indica se o jogo terminou.
-
-Função setup():
-
-Configura o canvas (600x400 pixels).
-
-Inicializa a bola.
-
-Função draw():
-
-Limpa o fundo da tela.
-
-Se gameOver for true, exibe "Game Over!" e interrompe o jogo.
-
-Atualiza e desenha a bola.
-
-Percorre a lista de rachaduras:
-
-Faz as rachaduras crescerem.
-
-Remove rachaduras que ultrapassaram o tempo máximo de crescimento.
-
-⚾ Classe Ball
-
-A bola que o jogador pode lançar.
-
-constructor():
-
-Define a posição inicial da bola e suas propriedades (raio, velocidade, etc.).
-
-shoot(targetX, targetY):
-
-Calcula o ângulo para o ponto clicado e define a velocidade da bola.
-
-update():
-
-Move a bola conforme sua velocidade.
-
-Se sair da tela, a bola é resetada.
-
-Se colidir com uma rachadura, gera uma nova rachadura e reseta a bola.
-
-reset():
-
-Cria uma nova rachadura na posição da bola.
-
-Retorna a bola para a posição inicial.
-
-display():
-
-Desenha a bola na tela.
-
-🔥 Classe Crack
-
-Representa a rachadura que se forma quando a bola colide com a superfície.
-
-constructor(x, y):
-
-Inicializa uma rachadura com um ponto inicial.
-
-grow():
-
-Expande a rachadura de forma aleatória.
-
-Para o crescimento após um certo tempo (growthTime > 100).
-
-display():
-
-Desenha a rachadura conectando os pontos.
-
-🎯 Controles
-
-Clique do mouse: Lança a bola na direção do clique.
-
-🛠 Melhorias Futuras
-
-Adicionar som ao impacto da bola.
-
-Criar diferentes padrões de rachaduras.
-
-Introduzir um sistema de pontuação.
+Divirta-se!
 
