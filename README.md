@@ -1,4 +1,4 @@
-# Equipe: Caetano Padoin
+# Equipe: Caetano Padoin, Bruno Cristofolli
 
 
 ## Jogo da Fenda
